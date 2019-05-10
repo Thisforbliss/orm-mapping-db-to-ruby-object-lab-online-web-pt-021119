@@ -101,7 +101,7 @@ class Student
     #binding.pry
     sql = <<-SQL
     SELECT * FROM students WHERE students.grade = 10
-    LIMIT 1
+    LIMIT 2
     SQL
     DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
